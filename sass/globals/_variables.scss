@@ -1,0 +1,39 @@
+
+// * colors
+$dark-gray: #24232C;
+$gray: #817D92;
+$white-gray: #E6E5EA;
+$very-dark-blue: #18171F;
+$strong-pass: #A4FFAF;
+$too-weak-pass: #F64A4A;
+$weak-pass: #FB7C58;
+$medium-pass: #F8CD65;
+
+
+
+//* fonts
+$jetBrains-font: 'JetBrains Mono';
+
+//bold
+@font-face {
+      font-family: $jetBrains-font;
+      src: url('../../assets/fonts/static/JetBrainsMono-Bold.ttf');
+      font-weight: 800;
+      font-style: normal;
+}
+
+// italic bold
+@font-face {
+      font-family: $jetBrains-font;
+      src: url('../../assets/fonts/static/JetBrainsMono-BoldItalic.ttf');
+      font-weight: 800;
+      font-style: italic;
+}
+
+//regular
+@font-face {
+      font-family: $jetBrains-font;
+      src: url('../../assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+      font-weight: 400;
+      font-style: normal;
+}
