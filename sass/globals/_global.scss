@@ -1,1 +1,23 @@
 @use './variables';
+
+
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+
+
+html, body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: variables.$very-dark-blue;
+      color: variables.$white-gray;
+      font-family: variables.$jetBrains-font;
+}
+

@@ -3,11 +3,61 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
       <link rel="stylesheet" href="css/style.css">
       <title>Password Generator App</title>
 </head>
 <body>
-      
+      <header>
+            <h1>Password Generator</h1>
+      </header>
+      <main>
+            <div>
+                  <p>P4$$W0rD</p>
+                  <img src="./assets/images/icon-copy.svg" alt="Copy to Clipboard">
+            </div>
+            <form>
+                  <div>
+                        <div>
+                              <label for="characters">Character Length</label>
+                              <p>10</p>
+                        </div>
+                        <input type="range" min="8" max="20" id="characters">
+                  </div>
+                  <div>
+                        <div>
+                              <input type="checkbox" name="uppercase" id="uppercase">
+                              <label for="uppercase">Include Uppercase Letters</label>
+                        </div>
+                        <div>
+                              <input type="checkbox" name="lowercase" id="lowercase">
+                              <label for="lowercase">Include Lowercase Letters</label>
+                        </div>
+                        <div>
+                              <input type="checkbox" name="numbers" id="numbers">
+                              <label for="numbers">Include Numbers Letters</label>
+                        </div>
+                        <div>
+                              <input type="checkbox" name="symbols" id="symbols">
+                              <label for="symbols">Include Symbols Letters</label>
+                        </div>
+
+                  </div>
+                  <div>
+                        <h4>strength</h4>
+                        <div>
+                              <p>medium</p>
+                              <div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                              </div>
+                        </div>
+                  </div>
+                  <button>generate <span><img src="./assets/images/icon-arrow-right.svg" alt="arrow right"></span></button>
+            </form>
+
+      </main>
 </body>
 </html>
