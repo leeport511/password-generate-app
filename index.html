@@ -8,21 +8,21 @@
       <title>Password Generator App</title>
 </head>
 <body>
-      <header>
+      <header class="title-container">
             <h1>Password Generator</h1>
       </header>
-      <main>
-            <div>
+      <main class="pass-generator-container">
+            <div class="password">
                   <p>P4$$W0rD</p>
                   <img src="./assets/images/icon-copy.svg" alt="Copy to Clipboard">
             </div>
             <form>
-                  <div>
+                  <div class="password-length-container">
                         <div>
                               <label for="characters">Character Length</label>
                               <p>10</p>
                         </div>
-                        <input type="range" min="8" max="20" id="characters">
+                        <input type="range" min="6" max="16" id="characters-range">
                   </div>
                   <div>
                         <div>
