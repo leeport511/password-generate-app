@@ -95,6 +95,100 @@
                         cursor: pointer;  
                   }
 
+            }
+
+
+            .password-characteristics-container {
+                  margin-bottom: 16px;
+
+
+                  div {
+                        margin-bottom: 16px;
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        label {
+                              font-size: 14px;
+                              font-weight: 600;
+
+                        }
+
+
+                        input[type="checkbox"] {
+                              -webkit-appearance: none; /* para Safari y Chrome */
+                              -moz-appearance: none;    /* para Firefox */
+                              appearance: none;
+                              border: 2px solid variables.$white-gray;
+                              background: inherit;
+                              width: 20px;
+                              height: 20px;
+                              cursor: pointer;
+                              transition: background-color 0.3s, border-color 0.3s;
+                        }
+
+                        input[type="checkbox"]:checked {
+                             background-color: variables.$strong-pass;
+                             border-color: variables.$strong-pass;
+                             background-image: url('../../assets/images/icon-check.svg');
+                             background-size: 12px 12px;
+                             background-repeat: no-repeat;
+                             background-position: center;
+                        }
+                  }
+            }
+
+
+            .password-strength-container {
+                  background-color: variables.$very-dark-blue;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 15px;
+                  margin-bottom: 16px;
+
+
+                  h4 {
+                        color: variables.$gray;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                  }
+
+                  div {
+                        display: flex;
+                        align-items: center;
+                        
+                        p {
+                              margin-right: 16px;
+                              font-size: 18px;
+                              text-transform: uppercase;
+                              letter-spacing: 0.04rem;
+                              font-weight: 700;
+                              
+                        }
+
+                        .strength-boxes {
+                              display: flex;
+                              align-items: center;
+                              gap: 7px;
+
+                              div {
+                                    border: 2px solid variables.$white-gray;
+                                    width: 10px;
+                                    height: 28px;
+                              }
+                        }
+                  }
+            }
+
+            button {
+                  background-color: variables.$strong-pass;
+                  height: 56px;
+                  color: variables.$very-dark-blue;
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  font-family: variables.$jetBrains-font;
 
 
             }

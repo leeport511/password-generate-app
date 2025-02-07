@@ -83,6 +83,81 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.pass-generator-container form .password-characteristics-container {
+  margin-bottom: 16px;
+}
+.pass-generator-container form .password-characteristics-container div {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pass-generator-container form .password-characteristics-container div label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.pass-generator-container form .password-characteristics-container div input[type=checkbox] {
+  -webkit-appearance: none; /* para Safari y Chrome */
+  -moz-appearance: none; /* para Firefox */
+  appearance: none;
+  border: 2px solid #E6E5EA;
+  background: inherit;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.pass-generator-container form .password-characteristics-container div input[type=checkbox]:checked {
+  background-color: #A4FFAF;
+  border-color: #A4FFAF;
+  background-image: url("../../assets/images/icon-check.svg");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pass-generator-container form .password-strength-container {
+  background-color: #18171F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 16px;
+}
+.pass-generator-container form .password-strength-container h4 {
+  color: #817D92;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.pass-generator-container form .password-strength-container div {
+  display: flex;
+  align-items: center;
+}
+.pass-generator-container form .password-strength-container div p {
+  margin-right: 16px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-weight: 700;
+}
+.pass-generator-container form .password-strength-container div .strength-boxes {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.pass-generator-container form .password-strength-container div .strength-boxes div {
+  border: 2px solid #E6E5EA;
+  width: 10px;
+  height: 28px;
+}
+.pass-generator-container form button {
+  background-color: #A4FFAF;
+  height: 56px;
+  color: #18171F;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "JetBrains Mono";
+}
 
 * {
   padding: 0;
