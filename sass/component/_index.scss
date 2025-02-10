@@ -19,7 +19,7 @@
 // main
 
 .pass-generator-container {
-      min-width: 343px;
+      max-width: 343px;
       height: 503px;
 
 
@@ -39,12 +39,13 @@
                   height: 64px;
                   width: 100%;
                   padding: 16px;
-                  font-size: 30px;
+                  font-size: 28px;
+                  color: variables.$white-gray;
+                  font-family: variables.$jetBrains-font;
 
                   &::placeholder {
-                        font-size: 30px;
+                        font-size: 28px;
                         font-weight: 500;
-                        letter-spacing: 0.07rem;
                         color: variables.$gray;
                   }
             }
@@ -64,6 +65,8 @@
                   pointer-events: all;
                   cursor: pointer;
                   position: absolute;
+                  width: 21px;
+                  height: 24px;
                   color: variables.$strong-pass;
                   right: 16px;
                   transition: color 0.3 ease;
@@ -124,7 +127,12 @@
                         height: 22px;
                         background: variables.$white-gray;
                         border-radius: 50%;
-                        cursor: pointer;  
+                        cursor: pointer;
+                        
+                        &:hover {
+                              background-color: variables.$very-dark-blue;
+                              border: 1px solid variables.$strong-pass;
+                        }
                   }
 
             }
@@ -213,17 +221,48 @@
                   }
             }
 
-            button {
-                  background-color: variables.$strong-pass;
-                  height: 56px;
-                  color: variables.$very-dark-blue;
-                  font-size: 16px;
-                  text-transform: uppercase;
-                  font-weight: 500;
-                  font-family: variables.$jetBrains-font;
 
+            .generate-btn {
 
+                  position: relative;
+                  width: 100%;
+                  display: flex;
+
+                  button {
+                        position: relative;
+                        background-color: variables.$strong-pass;
+                        height: 56px;
+                        width: 100%;
+                        color: variables.$very-dark-blue;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-family: variables.$jetBrains-font;
+                        border: none;
+                        cursor: pointer;
+
+      
+      
+                        &:hover {
+                              background-color: variables.$dark-gray;
+                              border: 1px solid variables.$strong-pass;
+                              color: variables.$strong-pass;
+                              transition: color 0.5 ease;
+
+                              svg {
+                                    color: variables.$strong-pass;     
+                              }
+                        }
+      
+                        svg {
+                              pointer-events: all;
+                              color: variables.$very-dark-blue;
+                        }
+      
+                  }
+      
             }
+
       }
 
 }
