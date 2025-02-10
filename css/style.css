@@ -170,6 +170,7 @@
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-weight: 700;
+  display: none;
 }
 .pass-generator-container form .password-strength-container div .strength-boxes {
   display: flex;
