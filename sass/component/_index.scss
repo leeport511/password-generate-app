@@ -1,284 +1,252 @@
-@use '../globals/variables';
-
+@use "../globals/variables";
 
 // mobile screen
 
 //header
 
 .title-container {
-      text-align: center;
-      color: variables.$gray;
-      margin-bottom: 16px;
+  text-align: center;
+  color: variables.$gray;
+  margin-bottom: 16px;
 
-      h1 {
-            font-size: 16px;
-            font-weight: bold;
-      }
+  h1 {
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 // main
 
 .pass-generator-container {
-      max-width: 343px;
-      height: 503px;
+  max-width: 343px;
+  height: 503px;
 
+  .password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+    position: relative;
 
-      .password {
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           width: 100%;
-           margin-bottom: 16px;
-           position: relative;
-           
-            input{
+    input {
+      background-color: variables.$dark-gray;
+      outline: none;
+      border: none;
+      height: 64px;
+      width: 100%;
+      padding: 16px;
+      font-size: 28px;
+      color: variables.$white-gray;
+      font-family: variables.$jetBrains-font;
 
-                  background-color: variables.$dark-gray;
-                  outline: none;
-                  border: none;
-                  height: 64px;
-                  width: 100%;
-                  padding: 16px;
-                  font-size: 28px;
-                  color: variables.$white-gray;
-                  font-family: variables.$jetBrains-font;
+      &::placeholder {
+        font-size: 28px;
+        font-weight: 500;
+        color: variables.$gray;
+      }
+    }
 
-                  &::placeholder {
-                        font-size: 28px;
-                        font-weight: 500;
-                        color: variables.$gray;
-                  }
-            }
+    .copied-txt {
+      text-transform: uppercase;
+      color: variables.$strong-pass;
+      font-size: 18px;
+      font-weight: 500;
+      position: absolute;
+      right: 48px;
+      display: none;
+    }
 
-            .copied-txt {
-                  text-transform: uppercase;
-                  color: variables.$strong-pass;
-                  font-size: 18px;
-                  font-weight: 500;
-                  position: absolute;
-                  right: 48px;
-                  display: none;
+    svg {
+      pointer-events: all;
+      cursor: pointer;
+      position: absolute;
+      width: 21px;
+      height: 24px;
+      color: variables.$strong-pass;
+      right: 16px;
+      transition: color 0.3 ease;
 
-            }
+      &:hover {
+        color: variables.$white-gray;
+      }
+    }
+  }
 
-            svg {
-                  pointer-events: all;
-                  cursor: pointer;
-                  position: absolute;
-                  width: 21px;
-                  height: 24px;
-                  color: variables.$strong-pass;
-                  right: 16px;
-                  transition: color 0.3 ease;
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$dark-gray;
+    padding: 16px;
 
-                  &:hover {
-                        color: variables.$white-gray;
-                  }
+    .password-length-container {
+      margin-bottom: 32px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
 
-            }
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
 
+        label {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        p {
+          color: variables.$strong-pass;
+          font-size: 22px;
+          font-weight: bolder;
+        }
       }
 
-      form {
-            display: flex;
-            flex-direction: column;
-            background-color: variables.$dark-gray;
-            padding: 16px;
-
-
-            .password-length-container {
-                  margin-bottom: 32px;
-                  width: 100%;
-                  display: flex;
-                  flex-direction: column;
-
-                  div {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 12px;
-
-
-                        label {
-                           font-size: 16px;
-                           font-weight: bold;   
-                        }
-
-                        p {
-                           color: variables.$strong-pass;
-                           font-size: 22px;
-                           font-weight: bolder;   
-                        }
-                  }
-
-                  input {
-                        -webkit-appearance: none;
-                        background: variables.$very-dark-blue;
-                        outline: none;
-                        height: 8px;
-                        padding: 0;
-                        
-                  }
-
-                  input::-webkit-slider-thumb{
-                        -webkit-appearance: none;
-                        appearance: none;
-                        width: 22px;
-                        height: 22px;
-                        background: variables.$white-gray;
-                        border-radius: 50%;
-                        cursor: pointer;
-                        
-                        &:hover {
-                              background-color: variables.$very-dark-blue;
-                              border: 1px solid variables.$strong-pass;
-                        }
-                  }
-
-            }
-
-
-            .password-characteristics-container {
-                  margin-bottom: 16px;
-
-
-                  div {
-                        margin-bottom: 16px;
-                        display: flex;
-                        align-items: center;
-                        gap: 12px;
-
-                        label {
-                              font-size: 14px;
-                              font-weight: 600;
-
-                        }
-
-
-                        input[type="checkbox"] {
-                              -webkit-appearance: none; /* para Safari y Chrome */
-                              -moz-appearance: none;    /* para Firefox */
-                              appearance: none;
-                              border: 2px solid variables.$white-gray;
-                              background: inherit;
-                              width: 20px;
-                              height: 20px;
-                              cursor: pointer;
-                              transition: background-color 0.3s, border-color 0.3s;
-                        }
-
-                        input[type="checkbox"]:checked {
-                             background-color: variables.$strong-pass;
-                             border-color: variables.$strong-pass;
-                             background-image: url('../../assets/images/icon-check.svg');
-                             background-size: 12px 12px;
-                             background-repeat: no-repeat;
-                             background-position: center;
-                        }
-                  }
-            }
-
-
-            .password-strength-container {
-                  background-color: variables.$very-dark-blue;
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  padding: 15px;
-                  margin-bottom: 16px;
-
-
-                  h4 {
-                        color: variables.$gray;
-                        text-transform: uppercase;
-                        font-size: 16px;
-                  }
-
-                  div {
-                        display: flex;
-                        align-items: center;
-                        
-                        p {
-                              margin-right: 16px;
-                              font-size: 18px;
-                              text-transform: uppercase;
-                              letter-spacing: 0.04rem;
-                              font-weight: 700;
-                              display: none;
-                              
-                        }
-
-                        .strength-boxes {
-                              display: flex;
-                              align-items: center;
-                              gap: 7px;
-
-                              div {
-                                    border: 2px solid variables.$white-gray;
-                                    width: 10px;
-                                    height: 28px;
-                              }
-                        }
-                  }
-            }
-
-
-            .generate-btn {
-
-                  position: relative;
-                  width: 100%;
-                  display: flex;
-
-                  button {
-                        position: relative;
-                        background-color: variables.$strong-pass;
-                        height: 56px;
-                        width: 100%;
-                        color: variables.$very-dark-blue;
-                        font-size: 16px;
-                        text-transform: uppercase;
-                        font-weight: 500;
-                        font-family: variables.$jetBrains-font;
-                        border: none;
-                        cursor: pointer;
-
-      
-      
-                        &:hover {
-                              background-color: variables.$dark-gray;
-                              border: 1px solid variables.$strong-pass;
-                              color: variables.$strong-pass;
-                              transition: color 0.5 ease;
-
-                              svg {
-                                    color: variables.$strong-pass;     
-                              }
-                        }
-      
-                        svg {
-                              pointer-events: all;
-                              color: variables.$very-dark-blue;
-                        }
-      
-                  }
-      
-            }
-
+      input {
+        -webkit-appearance: none;
+        background: variables.$very-dark-blue;
+        outline: none;
+        height: 8px;
+        padding: 0;
       }
 
+      input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        background: variables.$white-gray;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+          background-color: variables.$very-dark-blue;
+          border: 1px solid variables.$strong-pass;
+        }
+      }
+    }
+
+    .password-characteristics-container {
+      margin-bottom: 16px;
+
+      div {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        label {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        input[type="checkbox"] {
+          -webkit-appearance: none; /* para Safari y Chrome */
+          -moz-appearance: none; /* para Firefox */
+          appearance: none;
+          border: 2px solid variables.$white-gray;
+          background: inherit;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        input[type="checkbox"]:checked {
+          background-color: variables.$strong-pass;
+          border-color: variables.$strong-pass;
+          background-image: url("../../assets/images/icon-check.svg");
+          background-size: 12px 12px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .password-strength-container {
+      background-color: variables.$very-dark-blue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      margin-bottom: 16px;
+
+      h4 {
+        color: variables.$gray;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-right: 16px;
+          font-size: 18px;
+          text-transform: uppercase;
+          letter-spacing: 0.04rem;
+          font-weight: 700;
+          display: none;
+        }
+
+        .strength-boxes {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          div {
+            border: 2px solid variables.$white-gray;
+            width: 10px;
+            height: 28px;
+          }
+        }
+      }
+    }
+
+    .generate-btn {
+      position: relative;
+      width: 100%;
+      display: flex;
+
+      button {
+        position: relative;
+        background-color: in;
+        height: 56px;
+        width: 100%;
+        color: variables.$very-dark-blue;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: variables.$jetBrains-font;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: variables.$dark-gray;
+          border: 1px solid variables.$strong-pass;
+          color: variables.$strong-pass;
+          transition: color 0.5 ease;
+
+          svg {
+            color: variables.$strong-pass;
+          }
+        }
+
+        svg {
+          pointer-events: all;
+          color: variables.$very-dark-blue;
+        }
+      }
+    }
+  }
 }
-
-
-
-
 
 //tablet screen
 @media screen and (min-witdh: 768px) {
-      
 }
-
 
 // desktop screen
 @media screen and (min-witdh: 1280px) {
-      
 }
