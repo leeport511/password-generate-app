@@ -30,16 +30,7 @@ rangeInput.addEventListener("input", (e) => {
 const checkboxInputs = document.querySelectorAll("[type=checkbox]");
 const selectedCheckboxes = [];
 
-checkboxInputs.forEach((checkbox) => {
-  checkbox.addEventListener("change", () => {
-    const { value, checked } = checkbox;
-    console.log(
-      `Este checkbox ${value} acaba de ser seleccionado y esta en ${checked}`
-    );
-  });
-});
-
-const addPasswordCharacteristics = (e) => {
+const addPasswordCharacteristics = () => {
   selectedCheckboxes.length = 0;
 
   checkboxInputs.forEach(({ id, checked }) => {
@@ -71,44 +62,28 @@ const getPasswordStrength = (e) => {
     box.style.border = "1px solid #E6E5EA";
   });
 
-  // todo: hacer un array con objetos adentro q tenga el titulo, el color y el count respectivo
   //todo: despues hacer una constante q se el level, actulizar el titulo y hacer un for para aplicar el estilo.
 
-  switch (true) {
-    case selectedCheckboxes.length === 0:
-      typeStrengthTitle.textContent = `too weak`;
-      typeStrengthTitle.style.display = "flex";
-      strengthBox1.style.border = "none";
-      strengthBox1.style.backgroundColor = "#F64A4A";
+  const strengthStates = [
+    { title: "too weak", color: "#F64A4A", count: 0 },
+    { title: "weak", color: "#FB7C58", count: 1 },
+    { title: "medium", color: "#F8CD65", count: 2 },
+    { title: "medium", color: "#F8CD65", count: 2 },
+    { title: "strong", color: "#A4FFAF", count: 4 },
+  ];
 
-      return;
+  const level =
+    strengthStates[selectedCheckboxes.length] ||
+    strengthStates[selectedCheckboxes.length - 1];
 
-    case selectedCheckboxes.length === 1:
-      typeStrengthTitle.textContent = `weak`;
-      typeStrengthTitle.style.display = "flex";
-      strengthBox1.style.border = "none";
-      strengthBox1.style.backgroundColor = "#FB7C58";
-      strengthBox2.style.border = "none";
-      strengthBox2.style.backgroundColor = "#FB7C58";
+  typeStrengthTitle.textContent = level.title;
+  typeStrengthTitle.style.display = "flex";
 
-      return;
+  for (let i = 0; i <= level.count; i++) {
+    console.log(boxes[i]);
 
-    case selectedCheckboxes.length === 2 || selectedCheckboxes.length === 3:
-      typeStrengthTitle.textContent = `medium`;
-      typeStrengthTitle.style.display = "flex";
-
-      return;
-
-    case selectedCheckboxes.length === 4:
-      typeStrengthTitle.textContent = `strong`;
-      typeStrengthTitle.style.display = "flex";
-
-      return;
-
-    default:
-      console.log(`algo esta fallando`);
-
-      return;
+    boxes[i].style.border = "none";
+    boxes[i].style.backgroundColor = level.color;
   }
 };
 
