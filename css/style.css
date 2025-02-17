@@ -54,6 +54,7 @@
   position: absolute;
   right: 48px;
   display: none;
+  transition: all 3 ease-in-out;
 }
 .pass-generator-container .password svg {
   pointer-events: all;
