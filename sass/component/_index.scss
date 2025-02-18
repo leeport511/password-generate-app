@@ -214,7 +214,7 @@
 
 			button {
 				position: relative;
-				background-color: in;
+				background-color: variables.$strong-pass;
 				height: 56px;
 				width: 100%;
 				color: variables.$very-dark-blue;
@@ -246,9 +246,99 @@
 }
 
 //tablet screen
-@media screen and (min-witdh: 768px) {
+@media screen and (min-width: 768px) {
+	//header
+
+	.title-container {
+		margin-bottom: 31px;
+
+		h1 {
+			font-size: 24px;
+		}
+	}
+
+	// main
+
+	.pass-generator-container {
+		max-width: 540px;
+		height: 632px;
+
+		.password {
+			margin-bottom: 24px;
+
+			input {
+				padding: 19px 32px;
+			}
+
+			.copied-txt {
+				right: 64px;
+			}
+
+			svg {
+				right: 32px;
+			}
+		}
+
+		form {
+			padding: 24px 32px 32px 32px;
+
+			.password-length-container {
+				div {
+					margin-bottom: 16px;
+
+					label {
+						font-size: 18px;
+						font-weight: normal;
+					}
+
+					p {
+						font-size: 26px;
+					}
+				}
+			}
+
+			.password-characteristics-container {
+				margin-bottom: 32px;
+
+				div {
+					margin-bottom: 19px;
+					gap: 24px;
+
+					label {
+						font-size: 16px;
+						font-weight: 500;
+					}
+				}
+			}
+
+			.password-strength-container {
+				padding: 22px 32px;
+				margin-bottom: 32px;
+
+				h4 {
+					font-size: 18px;
+				}
+
+				div {
+					p {
+						font-size: 20px;
+					}
+
+					.strength-boxes {
+						gap: 8px;
+					}
+				}
+			}
+
+			.generate-btn {
+				button {
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }
 
 // desktop screen
-@media screen and (min-witdh: 1280px) {
+@media screen and (min-width: 1280px) {
 }

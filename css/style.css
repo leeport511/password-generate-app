@@ -190,7 +190,7 @@
 }
 .pass-generator-container form .generate-btn button {
   position: relative;
-  background-color: in;
+  background-color: #A4FFAF;
   height: 56px;
   width: 100%;
   color: #18171F;
@@ -215,6 +215,70 @@
   color: #18171F;
 }
 
+@media screen and (min-width: 768px) {
+  .title-container {
+    margin-bottom: 31px;
+  }
+  .title-container h1 {
+    font-size: 24px;
+  }
+  .pass-generator-container {
+    max-width: 540px;
+    height: 632px;
+  }
+  .pass-generator-container .password {
+    margin-bottom: 24px;
+  }
+  .pass-generator-container .password input {
+    padding: 19px 32px;
+  }
+  .pass-generator-container .password .copied-txt {
+    right: 64px;
+  }
+  .pass-generator-container .password svg {
+    right: 32px;
+  }
+  .pass-generator-container form {
+    padding: 24px 32px 32px 32px;
+  }
+  .pass-generator-container form .password-length-container div {
+    margin-bottom: 16px;
+  }
+  .pass-generator-container form .password-length-container div label {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .pass-generator-container form .password-length-container div p {
+    font-size: 26px;
+  }
+  .pass-generator-container form .password-characteristics-container {
+    margin-bottom: 32px;
+  }
+  .pass-generator-container form .password-characteristics-container div {
+    margin-bottom: 19px;
+    gap: 24px;
+  }
+  .pass-generator-container form .password-characteristics-container div label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .pass-generator-container form .password-strength-container {
+    padding: 22px 32px;
+    margin-bottom: 32px;
+  }
+  .pass-generator-container form .password-strength-container h4 {
+    font-size: 18px;
+  }
+  .pass-generator-container form .password-strength-container div p {
+    font-size: 20px;
+  }
+  .pass-generator-container form .password-strength-container div .strength-boxes {
+    gap: 8px;
+  }
+  .pass-generator-container form .generate-btn button {
+    font-size: 18px;
+  }
+}
 * {
   padding: 0;
   margin: 0;
